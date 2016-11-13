@@ -1,0 +1,34 @@
+#footer-wrapper {
+	background: $purple;
+	margin-top: 15px;
+	padding: 60px 0;
+}
+
+#copyright {
+	background: $dark-gray;
+	padding: 10px 0;
+	color: $white;
+	@include font-size(1.4);
+	a {
+	color: $white;
+	}
+	.designer-info {
+	text-align: right;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#copyright {	
+		.designer-info, .site-info {
+		text-align: center;
+		}
+	}	
+}
+
+#colophon {
+	.widget {
+	h2 {
+		color: $white;
+	}
+	}
+}

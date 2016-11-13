@@ -1,0 +1,24 @@
+#colophon .widget {
+	color: $white;
+
+	h2 {
+		@include font-size(1.8);
+		text-transform: uppercase;
+		font-weight: bold;
+		
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			padding-bottom: 20px;
+			a {
+				color: $white;
+			}
+		}
+	}
+	.post-date {
+		font-size: 80%;
+	}
+}

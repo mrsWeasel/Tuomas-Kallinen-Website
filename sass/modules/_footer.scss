@@ -1,0 +1,25 @@
+#footer-wrapper {
+	background: $purple;
+	margin-top: 15px;
+	padding: 60px 0;
+}
+
+#copyright {
+	background: $dark-gray;
+	padding: 10px 0;
+	color: $white;
+	a {
+	color: $white;
+	}
+	.designer-info {
+	text-align: right;
+	}
+}
+
+#colophon {
+	.widget {
+	h2 {
+		color: $white;
+	}
+	}
+}

@@ -1,0 +1,192 @@
+#main-wrapper {
+	position: relative;
+	min-height: 100%;
+	margin: 0 15px;
+	overflow: hidden;
+	#page {
+		width: 100%;
+		position: relative;
+		transform: translateX(0);
+		transition: .5s ease all;
+	}
+	#page.open {
+		transform: translateX(250px); //fallback
+		transform: translateX(100vw);
+	}
+	@media screen and (min-width: 768px) {
+		#page.open {
+			transform: translateX(0);
+		}
+	}
+}
+
+
+#masthead-inner {
+	background-color: rgba(9,9,16,0);
+	padding: 18px 0;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	
+}
+
+//#masthead-inner[data-scrolled="false"] {
+//	@include transition(background-color, 0.5s, ease-in-out);
+//	background-color: rgba(9,9,16,0); 
+//}
+
+//#masthead-inner[data-scrolled="true"] {
+//	@include transition(background-color, 0.5s, ease-in-out);
+//	background-color: rgba(9,9,16,1);
+//}
+
+#page-header {
+	position: relative;
+	background: $dark-gray;
+	background: radial-gradient(ellipse farthest-corner at 50% 100%, #1c1c31 0%, $dark-gray 80%);
+	text-align: right;
+	h1 {
+		padding-top: 120px;
+		text-align: center;
+		margin-bottom: 0.2em;
+	}
+	.container {
+		position: relative;
+		min-height: 310px;
+		padding-bottom: 40px;
+	}
+}
+
+.site-branding {
+	text-align: right;
+	#home-link {
+		display: inline-block;
+
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.site-branding {
+		text-align: left;
+		#home-link {
+			line-height: 50px;
+			min-height: 50px;
+			img {
+			vertical-align: middle;
+			}		
+		}
+
+	}
+}
+
+#front-page-tall-header {
+	position: relative;
+	background: $purple;
+	background-image: url(../assets/images/tk_front_page.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 120px 0 40px;
+	#header-content {
+		text-align: center;
+		@include font-size(3);
+		color: $white;
+		p {
+			&:before, &:after {
+				content: "";
+				display: block;
+				height: 30px;
+				margin: auto;
+				width: 50%;
+			}
+			&:before {
+				margin-bottom: 40px;
+				border-bottom: 1px solid $white;
+			}
+			&:after {
+				margin-top: 40px;
+				border-top: 1px solid $white;
+			}
+		}
+		#scroll-icon {
+			display: block;
+			width: 70px;
+			height: 70px;
+			padding: 10px;
+			margin: 0 auto;
+			border: 1px solid $white;
+			border-radius: 50%;
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				@include keyframe(scale) {
+				0% {
+					transform: rotate(0);
+				}
+				80% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			animation: scale 5s 1;
+			}
+			.icon-element {
+				fill: $white;
+			}
+		}
+		@media screen and (max-width: 767px) {
+			#scroll-icon {
+				display: none;
+			}
+		}
+		
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#front-page-tall-header {
+		min-height: 100vh;
+		padding: 30vh 0 0;
+	}
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	#front-page-tall-header {
+		min-height: 768px;
+		padding: 120px 0 40px;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	#front-page-tall-header {
+		min-height: 1024px;
+		padding: 120px 0 40px;
+	}
+}
+
+.breadcrumbs {
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.9);
+	opacity: 0.9;
+	color: $pink;
+	font-weight: bold;
+	padding: 5px 20px;
+	a {
+		text-decoration: none;
+		color: $pink;
+		}
+	}
+@media screen and (max-width: 480px) {
+	.breadcrumbs {
+		display: none;
+	}
+}

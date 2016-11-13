@@ -1,0 +1,182 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.entry-footer {
+	span:not(:last-child) {
+		margin-right: 5px;
+		&:after {
+			content: "|";
+			margin-left: 5px;
+			color: $dark-gray;
+		}
+	}
+}
+
+iframe {
+	background: #dbdbdb;
+}
+
+
+
+.sd-social {
+	.sd-title {
+		font-size: 15px !important;
+		display: inline-block !important;
+		margin-right: 20px !important;
+		vertical-align: middle;
+		&:before {
+			display: none !important;
+		}
+	}
+	.sd-content {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.tk-social-right {
+	text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+	.tk-social-right, .tag-container {
+	text-align: center;
+	}
+}
+
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.entry-meta {
+	@include font-size(1.4);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.tk-entry-meta {
+	color: $white;
+	text-align: center;
+	margin-top: 0;
+}
+
+.tag-container {
+	font-size: 0;
+	margin-bottom: 15px;
+	a {
+	@include font-size(1.6);
+	font-weight: bold;
+	display: inline-block;
+	padding: 2px 10px;
+	margin-right: 4px;
+	background: $pink;
+	color: $white;
+	text-decoration: none;
+	text-transform: lowercase;
+	&:hover, &:focus {
+		background: $dark-pink;
+	}
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+ul.page-numbers {
+	list-style-type: none;
+	margin: 0 0 50px;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		a, .current {
+			@include font-size(1.6);
+			color: $pink;
+			display: inline-block;
+			line-height: 2.5em;
+			height: 2.5em;
+			width: 2.5em;
+			text-align: center;
+			border-radius: 50%;
+			text-decoration: none;
+		}
+		.current {
+			border: 1px solid $pink;
+		}
+	}
+}
+
+.fullwidth-block {
+	background: $color__background-container;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+.tk-social-icon {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border: 1px solid $pink;
+	border-radius: 50%;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.tk-social-icon:not(:last-child) {
+	margin-right: 15px;
+}
+
+.more-link {
+	display: inline-block;
+	border: 1px solid $pink;
+	@include font-size(1.4);
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	@include transition(padding, 0.4s, ease-in-out);
+	padding: 5px 45px 5px 15px;
+	margin-top: 20px;
+	background-image: url(../assets/icons/icon-right-arrow.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	&:hover, &:focus {
+		@include transition(padding, 0.4s, ease-in-out);
+		padding: 5px 65px 5px 15px;
+		color: $pink;
+	}
+}
+
+#tk-facebook {
+	background-image: url(../assets/icons/icon-facebook.svg);
+	background-size: 22px;
+}
+
+#tk-soundcloud {
+	background-image: url(../assets/icons/icon-soundcloud.svg);
+	background-size: 58px;
+}
+
